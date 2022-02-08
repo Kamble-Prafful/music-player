@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <!-------- Custom font awesome cdn --------->
+    <!-- <script src="https://kit.fontawesome.com/05ac7671cc.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+
+
+    <!-------- Custom CSS file --------->
+    <link rel="stylesheet" href="Resources/stylesheets/style.css">
+    
+    <!-------- Custom JS file --------->
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="player-container">
+        <!-- Music Image -->
+        <div class="img-container">
+            <img src="Resources/Images/Hawayein.jpg" alt="Loading...">
+        </div>
+
+        <h2 id="title">Hawayein</h2> <!-- Song name -->
+        <h3 id="artist">Arijit Singh</h3> <!-- Artist name -->
+
+        <audio src="Resources/Audio/Hawayein (Jab Harry Met Sejal) 320 Kbps.mp3"></audio>
+
+        <!-- Progress bar -->
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0:00</span>
+                <span id="duration">4:32</span>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="player-controls">
+            <i class="fas fa-backward" id="prev" title="Previous"></i>
+            <i class="fas fa-play main-button" id="play" title="Play"></i>
+            <i class="fas fa-forward" id="next" title="Next"></i>
+        </div>
+    </div>
+</body>
+</html>
