@@ -10,6 +10,33 @@ const progress = document.getElementById('progress');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
 
+//Keys configuration
+document.addEventListener('keydown', (e)=>{
+    // console.log(e);
+    if(e.key === " "){
+        isPlaying ? pauseMusic(): playMusic();
+    }
+
+    if(e.key === "ArrowLeft"){
+        prevSong();
+    }
+    if(e.key === 'ArrowRight'){
+        nextSong();
+    }
+
+    if(e.key === 'ArrowDown'){
+        music.volume -= 0.05;
+        console.log(music.volume);
+    }
+
+    if(e.key === 'ArrowUp'){
+        music.volume += 0.05;
+        console.log(music.volume);
+    }
+});
+
+
+
 //Check if music is playing
 let isPlaying = false;
 
